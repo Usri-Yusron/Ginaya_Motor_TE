@@ -23,7 +23,7 @@
                             class="h-10 w-10 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl flex items-center justify-center">
                             <i class="bi bi-shop-window text-xl text-white"></i>
                         </div>
-                        <span class="ml-3 text-xl font-bold text-gray-900">Store</span>
+                        <span class="ml-3 text-xl font-bold text-gray-900">Ginaya Motor</span>
                     </a>
                 </div>
 
