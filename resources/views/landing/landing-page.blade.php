@@ -27,13 +27,13 @@
                         <span class="block mb-2 text-gray-900">Discover Your</span>
                         <span
                             class="block bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent">
-                            Signature Style
+                            Motor's Style
                         </span>
                     </h1>
 
                     <!-- Subheading -->
                     <p class="mx-auto md:mx-0 max-w-2xl text-lg sm:text-xl text-gray-600 leading-relaxed">
-                        Curated collections of premium fashion pieces that help you express your unique personality. Elegant, sustainable, and affordable.
+                       Solusi cerdas untuk mengubah pengalaman bermotor anda layaknya seperti Valentino Rossi dengan sparepart terbaru keluaran pabrik.
                     </p>
 
                     <!-- CTA Buttons with Enhanced Design -->
@@ -98,7 +98,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Trending Categories</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Explore our most popular fashion categories</p>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our most popular sparepart categories</p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -107,7 +107,7 @@
                     <div class="relative rounded-xl overflow-hidden aspect-square">
                         <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3" alt="Women's Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                            <h3 class="text-white font-medium text-lg">Women's</h3>
+                            <h3 class="text-white font-medium text-lg">Suku Cadang</h3>
                         </div>
                     </div>
                 </a>
@@ -117,7 +117,7 @@
                     <div class="relative rounded-xl overflow-hidden aspect-square">
                         <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22" alt="Men's Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                            <h3 class="text-white font-medium text-lg">Men's</h3>
+                            <h3 class="text-white font-medium text-lg">Sistem Transmisi</h3>
                         </div>
                     </div>
                 </a>
@@ -127,7 +127,7 @@
                     <div class="relative rounded-xl overflow-hidden aspect-square">
                         <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27" alt="Accessories" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                            <h3 class="text-white font-medium text-lg">Accessories</h3>
+                            <h3 class="text-white font-medium text-lg">Kaki-kaki & Suspensi</h3>
                         </div>
                     </div>
                 </a>
@@ -137,7 +137,7 @@
                     <div class="relative rounded-xl overflow-hidden aspect-square">
                         <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Footwear" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
-                            <h3 class="text-white font-medium text-lg">Footwear</h3>
+                            <h3 class="text-white font-medium text-lg">Accessories</h3>
                         </div>
                     </div>
                 </a>
