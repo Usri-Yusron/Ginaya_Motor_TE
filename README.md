@@ -66,5 +66,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Lain-lainnya
-Install semua depedence dengan (npm install)
-running dengan (php artisan serve)
+- Install semua depedence dengan (npm install)
+- running dengan (php artisan serve)
+- jangan lupa migrate database nya
