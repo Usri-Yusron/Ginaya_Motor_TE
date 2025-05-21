@@ -13,17 +13,17 @@
 </head>
 
 <body class="min-h-screen bg-gray-50">
-    <div class="min-h-screen flex items-center justify-center bg-gradient-custom">
+    <div class="min-h-screen flex items-center justify-center">
         <div class="w-full max-w-md mx-auto p-6">
-            <h1>Verifikasi Email</h1>
+            <h1 class="text-4xl mb-3 text-red-500">Verifikasi Email!</h1>
 
-            <p>
-                Terima kasih telah mendaftar! Sebelum mulai, silakan cek email kamu dan klik link verifikasi.
+            <p class="mb-3 text-gray-600">
+                Terima kasih telah mendaftar! Sebelum mulai, kami telah mengirimkan email verifikasi ke alamat email yang kamu daftarkan. Silakan cek inbox atau spam
             </p>
 
             <form method="POST" action="{{ route('verification.send') }}">
                 @csrf
-                <button type="submit">Kirim Ulang Email Verifikasi</button>
+                <button class="bg-transparent hover:bg-blue-800 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" type="submit">Kirim Ulang Email Verifikasi</button>
             </form>
 
             @if (session('message'))
