@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrdersController;
@@ -13,6 +14,28 @@ use App\Http\Controllers\User\UserCartController;
 use App\Http\Controllers\User\UserOrderController;
 use App\Http\Controllers\User\UserLandingController;
 use App\Http\Controllers\User\UserCheckoutController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+
+/*
+|--------------------------------------------------------------------------
+| Verification Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill(); // Menandai email sebagai verified
+
+    return redirect()->route('home'); // atau 'dashboard'
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Link verifikasi sudah dikirim!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +67,7 @@ Route::post('/payments/midtrans-callback', [UserCheckoutController::class, 'call
 | Authenticated User Routes
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     // Regular User Routes
     Route::get('/orders', [UserOrderController::class, 'index'])->name('user.orders');
 

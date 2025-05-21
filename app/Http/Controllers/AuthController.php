@@ -23,6 +23,7 @@ class AuthController extends Controller
     {
         return view('auth.register');
     }
+
     public function register(Request $request)
     {
         try {
@@ -39,45 +40,43 @@ class AuthController extends Controller
             ]);
 
             DB::beginTransaction();
-            try {
-                $user = User::create([
-                    'name' => $validated['name'],
-                    'email' => $validated['email'],
-                    'phone' => $validated['phone'],
-                    'address' => $validated['address'],
-                    'password' => Hash::make($validated['password']),
-                    'role' => 'user',
-                ]);
 
-                event(new Registered($user));
+            $user = User::create([
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'phone' => $validated['phone'],
+                'address' => $validated['address'],
+                'password' => Hash::make($validated['password']),
+                'role' => 'user',
+            ]);
 
-                Auth::login($user);
+            event(new Registered($user)); // Kirim email verifikasi
 
-                DB::commit();
+            Auth::login($user); // Login otomatis
 
-                return redirect()->route('home')
-                    ->with('success', 'Account created successfully! Welcome ' . $user->name);
+            DB::commit();
 
-            } catch (QueryException $e) {
-                DB::rollBack();
-                Log::error('Database error during registration: ' . $e->getMessage());
-                return redirect()->back()
-                    ->with('error', 'Failed to create account. Please try again.')
-                    ->withInput($request->except('password', 'password_confirmation'));
-            }
+            return redirect()->route('verification.notice')
+                ->with('success', 'Account created successfully! Please verify your email.');
+        } catch (QueryException $e) {
+            DB::rollBack();
+            Log::error('Database error during registration: ' . $e->getMessage());
 
+            return redirect()->back()
+                ->with('error', 'Failed to create account. Please try again.')
+                ->withInput($request->except('password', 'password_confirmation'));
         } catch (ValidationException $e) {
             return redirect()->back()
                 ->withErrors($e->errors())
                 ->withInput($request->except('password', 'password_confirmation'));
-
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             Log::error('Error during registration: ' . $e->getMessage());
             return redirect()->back()
                 ->with('error', 'An unexpected error occurred. Please try again.')
                 ->withInput($request->except('password', 'password_confirmation'));
         }
     }
+
     public function login(Request $request)
     {
         try {
@@ -103,12 +102,10 @@ class AuthController extends Controller
             throw ValidationException::withMessages([
                 'email' => ['Invalid credentials'],
             ]);
-
         } catch (ValidationException $e) {
             return redirect()->back()
                 ->withErrors($e->errors())
                 ->withInput($request->except('password'));
-
         } catch (Exception $e) {
             Log::error('Error during login: ' . $e->getMessage());
             return redirect()->back()
@@ -126,7 +123,6 @@ class AuthController extends Controller
 
             return redirect()->route('home')
                 ->with('success', 'You have been logged out successfully');
-
         } catch (Exception $e) {
             Log::error('Error during logout: ' . $e->getMessage());
             return redirect()->back()
