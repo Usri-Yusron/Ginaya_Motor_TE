@@ -1,6 +1,6 @@
 @extends('layouts.layouts-landing')
 
-@section('title', 'Stylique - Premium Fashion Store')
+@section('title', 'Ginaya Motor - Gudang Sparepart Motor Premium')
 
 @section('content')
     <!-- Hero Section with Enhanced Design -->
