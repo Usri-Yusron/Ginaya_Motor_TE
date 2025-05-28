@@ -105,7 +105,7 @@
                 <!-- Category 1 -->
                 <a href="#" class="group">
                     <div class="relative rounded-xl overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3" alt="Women's Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="/suku-cadang.jpeg" alt="Women's Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
                             <h3 class="text-white font-medium text-lg">Suku Cadang</h3>
                         </div>
@@ -115,7 +115,7 @@
                 <!-- Category 2 -->
                 <a href="#" class="group">
                     <div class="relative rounded-xl overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22" alt="Men's Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="/transmisi.jpeg" alt="Men's Collection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
                             <h3 class="text-white font-medium text-lg">Sistem Transmisi</h3>
                         </div>
@@ -125,7 +125,7 @@
                 <!-- Category 3 -->
                 <a href="#" class="group">
                     <div class="relative rounded-xl overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27" alt="Accessories" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="/kaki.jpeg" alt="Accessories" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
                             <h3 class="text-white font-medium text-lg">Kaki-kaki & Suspensi</h3>
                         </div>
@@ -135,7 +135,7 @@
                 <!-- Category 4 -->
                 <a href="#" class="group">
                     <div class="relative rounded-xl overflow-hidden aspect-square">
-                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Footwear" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="/aksesoris.jpeg" alt="Footwear" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
                             <h3 class="text-white font-medium text-lg">Accessories</h3>
                         </div>
